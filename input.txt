@@ -1,8 +1,11 @@
-X = (A + B) * (C - D)
-if A > B:
-    X = A + B
+a = 5
+b = 10
+c = a + b
+
+if a < b:
+    c = c + 1
 else:
-    X = B - A
-i = 0
-while i < 5:
-    i = i + 1
+    c = c - 1
+
+while c < 20:
+    c = c + 2
