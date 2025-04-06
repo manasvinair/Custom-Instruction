@@ -1,6 +1,6 @@
 # Custom-Instruction
 Design a custom instruction for a given equation in compiler.
-
+                  ## Submitted by : Manasvi Nair (23115056)
 
 # Custom Instruction Generator
 
@@ -96,13 +96,5 @@ LABEL L5:
 
 - Python
 - Streamlit
-
----
-
-## Future Enhancements
-
-- Syntax highlighting for the output.
-- Option to download output as a `.asm` or `.txt` file.
-- Real-time editing support inside the app.
 
 
