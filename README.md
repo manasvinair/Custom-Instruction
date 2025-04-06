@@ -29,7 +29,7 @@ Deployed Website: **(https://custom-instruction-23115056.streamlit.app/)**
 1. Clone the repository
    ```bash
    git clone https://github.com/manasvinair/Custom-Instruction.git
-   cd custom-instruction-generator
+   cd Custom-Instruction
    ```
 
 2. Install dependencies
@@ -39,7 +39,7 @@ Deployed Website: **(https://custom-instruction-23115056.streamlit.app/)**
 
 3. Run the app
    ```bash
-   streamlit run your_script_name.py
+   streamlit run custominstruction.py
    ```
 
 4. Open `http://localhost:8501` in your browser to use the app.
