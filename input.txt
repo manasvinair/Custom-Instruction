@@ -1,0 +1,8 @@
+X = (A + B) * (C - D)
+if A > B:
+    X = A + B
+else:
+    X = B - A
+i = 0
+while i < 5:
+    i = i + 1
