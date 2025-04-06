@@ -1,6 +1,7 @@
 # Custom-Instruction
 Design a custom instruction for a given equation in compiler.
-                  ## Submitted by : Manasvi Nair (23115056)
+
+## Submitted by : Manasvi Nair (23115056)
 
 # Custom Instruction Generator
 
@@ -10,7 +11,7 @@ This is a Streamlit web application that reads code from an uploaded `.txt` or `
 
 ## Live Demo
 
-Deployed Website: **[Add your deployed website link here]**
+Deployed Website: **(https://custom-instruction-23115056.streamlit.app/)**
 
 ---
 
