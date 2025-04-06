@@ -28,7 +28,7 @@ Deployed Website: **(https://custom-instruction-23115056.streamlit.app/)**
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/your-username/custom-instruction-generator.git
+   git clone https://github.com/manasvinair/Custom-Instruction.git
    cd custom-instruction-generator
    ```
 
