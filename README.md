@@ -51,7 +51,8 @@ Deployed Website: **(https://custom-instruction-23115056.streamlit.app/)**
 ```python
 a = 5
 b = 10
-c = a + b
+c = 9
+d = a + b * c
 
 if a < b:
     c = c + 1
@@ -60,6 +61,7 @@ else:
 
 while c < 20:
     c = c + 2
+
 ```
 
 ---
@@ -71,24 +73,28 @@ LOAD R1, 5
 STORE a, R1
 LOAD R2, 10
 STORE b, R2
-ADD R3, R1, R2
+LOAD R3, 9
 STORE c, R3
+MANA a, b, c
+STORE d, a
 IF a < b GOTO L1
+LOAD R4, 1
+ADD R5, R3, R4
+STORE c, R5
 GOTO L2
 LABEL L1:
-ADD R4, R3, R5
-STORE c, R4
-GOTO L3
+LOAD R6, 1
+SUB R7, R5, R6
+STORE c, R7
 LABEL L2:
-SUB R4, R3, R5
-STORE c, R4
 LABEL L3:
+IF NOT c < 20 GOTO L4
+LOAD R8, 2
+ADD R9, R7, R8
+STORE c, R9
+GOTO L3
 LABEL L4:
-IF NOT c < 20 GOTO L5
-ADD R6, R4, R7
-STORE c, R6
-GOTO L4
-LABEL L5:
+
 ```
 
 ---
