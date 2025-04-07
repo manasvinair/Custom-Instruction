@@ -29,7 +29,22 @@ class InstructionGenerator:
         var = var.strip()
         expr = expr.strip()
 
-        # Three Address Code Generation
+        # Check for a + b * c pattern
+        if '+' in expr and '*' in expr:
+        # Handle a + b * c as mana a, b, c
+        # Basic parsing assuming format: a + b * c
+            parts = expr.split('+')
+            a = parts[0].strip()
+            b_mul_c = parts[1].strip()
+            if '*' in b_mul_c:
+                b, c = b_mul_c.split('*')
+                b = b.strip()
+                c = c.strip()
+                self.instructions.append(f"MANA {a}, {b}, {c}")
+                self.instructions.append(f"STORE {var}, {a}")  # Assuming result is stored in a
+                return
+
+        # Standard expressions
         if '+' in expr:
             op1, op2 = expr.split('+')
             r1 = self.load_operand(op1.strip())
@@ -55,11 +70,10 @@ class InstructionGenerator:
             r3 = self.get_register()
             self.instructions.append(f"DIV {r3}, {r1}, {r2}")
         else:
-            r1 = self.load_operand(expr.strip())
-            r3 = r1
-
+            r3 = self.load_operand(expr.strip())
         self.instructions.append(f"STORE {var}, {r3}")
         self.variables[var] = r3
+
 
     def load_operand(self, operand):
         if operand.isdigit():
@@ -155,6 +169,8 @@ if __name__ == "__main__":
             f.write(instr + "\n")
 
     print("Custom instructions written to:", os.path.abspath("output.txt"))
+    
+    
 
 #streamlit UI
 st.title("Custom Instruction Generator")
