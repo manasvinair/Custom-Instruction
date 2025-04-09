@@ -11,7 +11,7 @@ This is a Streamlit web application that reads code from an uploaded `.txt` or `
 
 ## Live Demo
 
-Deployed Website: **(https://custom-instruction-23115056.streamlit.app/)**
+Deployed Website: **(https://custom-instruction-23115056.streamlit.app/)](https://custom-instruction-manasvi.streamlit.app/)**
 
 ---
 
