@@ -164,11 +164,11 @@ if __name__ == "__main__":
     gen = InstructionGenerator()
     instructions = gen.generate(code)
 
-    with open("output.txt", "w") as f:
+    with open("output.asm", "w") as f:
         for instr in instructions:
             f.write(instr + "\n")
 
-    print("Custom instructions written to:", os.path.abspath("output.txt"))
+    print("Custom instructions written to:", os.path.abspath("output.asm"))
     
     
 
